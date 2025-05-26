@@ -189,7 +189,7 @@ footer {
   }
 
   .image-text-container {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
   }
 
