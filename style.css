@@ -28,6 +28,7 @@ nav ul {
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 nav a {
@@ -49,10 +50,12 @@ nav a:hover {
 
 h1, h2 {
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
   font-size: 50px;
 }
 
 .abt {
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
 
@@ -90,7 +93,7 @@ button {
 }
 
 button:hover {
-  background: #00c37a;
+  background: rgb(0, 208, 132);
 }
 
 footer {
@@ -101,7 +104,6 @@ footer {
   color: #aaa;
 }
 
-/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -113,7 +115,6 @@ footer {
   }
 }
 
-/* Image and Text Layout */
 .image-text-container {
   display: flex;
   flex-wrap: wrap;
@@ -132,16 +133,15 @@ footer {
 
 .right-text {
   flex: 1;
+  min-width: 250px;
   font-family: Arial, sans-serif;
-  min-width: 280px;
+  text-align: left;
 }
 
-/* Skills section */
 .skills-container {
   max-width: 600px;
   margin: auto;
   text-align: left;
-  padding: 20px;
 }
 
 .skillbar {
@@ -159,41 +159,52 @@ footer {
   transition: width 1s ease;
 }
 
-/* Menu toggle for mobile (if needed in JS later) */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
   position: fixed;
-  top: 15px;
-  right: 15px;
+  right: 1rem;
+  top: 1rem;
   z-index: 1001;
 }
 
-/* Responsive Design */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
     background: #222;
-    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    display: none;
   }
 
-  h1, h2 {
-    font-size: 32px;
+  nav ul.active {
+    display: flex;
   }
 
-  .section {
-    padding: 50px 10px 20px;
+  .menu-toggle {
+    display: block;
   }
 
   .image-text-container {
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
   }
 
   .right-text {
     text-align: center;
+  }
+
+  h1, h2 {
+    font-size: 36px;
+  }
+
+  .abt {
+    font-size: 18px;
   }
 }
