@@ -174,7 +174,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
     background: #222;
     padding: 10px 0;
