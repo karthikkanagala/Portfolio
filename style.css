@@ -19,6 +19,7 @@ header {
   width: 100%;
   top: 0;
   text-align: center;
+  z-index: 1000;
 }
 
 nav ul {
@@ -26,6 +27,7 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -47,12 +49,11 @@ nav a:hover {
 
 h1, h2 {
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
   font-size: 50px;
 }
-.abt{
-    font-family: 'Poppins', sans-serif;
-    font-size:20px ;
+
+.abt {
+  font-size: 20px;
 }
 
 ul {
@@ -89,7 +90,7 @@ button {
 }
 
 button:hover {
-  background: rgb(0, 208, 132);
+  background: #00c37a;
 }
 
 footer {
@@ -100,7 +101,7 @@ footer {
   color: #aaa;
 }
 
-/* Minimal animation */
+/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -111,30 +112,36 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* Image and Text Layout */
 .image-text-container {
   display: flex;
-  align-items: center;      /* Vertically center */
-  gap: 20px;                /* Space between image and text */
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
   padding: 20px;
+  justify-content: center;
 }
 
 .left-image {
-  width: 300px;             /* Set image width */
-  height: 450px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 8px;
-  margin-left:250px;
-  
-         /* Optional: rounded corners */
 }
 
 .right-text {
-  flex: 1;                  /* Take remaining space */
+  flex: 1;
   font-family: Arial, sans-serif;
+  min-width: 280px;
 }
+
+/* Skills section */
 .skills-container {
   max-width: 600px;
   margin: auto;
   text-align: left;
+  padding: 20px;
 }
 
 .skillbar {
@@ -151,15 +158,42 @@ footer {
   background-color: #007BFF;
   transition: width 1s ease;
 }
-}
+
+/* Menu toggle for mobile (if needed in JS later) */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  text-align: right;
-  top: 0;
   position: fixed;
-  padding-right: 1rem;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    background: #222;
+    padding: 10px 0;
+  }
+
+  h1, h2 {
+    font-size: 32px;
+  }
+
+  .section {
+    padding: 80px 15px 40px;
+  }
+
+  .image-text-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-text {
+    text-align: center;
+  }
 }
