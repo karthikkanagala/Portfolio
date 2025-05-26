@@ -164,7 +164,8 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .menu-toggle{
-    display: block;
+    orientation:landscape;
+    display: none;
      width: 100%;  
   }
 }
