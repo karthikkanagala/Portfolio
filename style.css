@@ -162,10 +162,4 @@ footer {
   position: fixed;
   padding-right: 1rem;
 }
-@media screen and (max-width: 768px) {
-  .menu-toggle{
-    orientation:landscape;
-    display: none;
-     width: 100%;  
-  }
 }
